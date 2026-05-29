@@ -28,7 +28,7 @@ export const profile = {
   intro:
     "Building robust full-stack applications, event-driven web modules, and reliable digital systems.",
   subtitle:
-    "I combine professional full-stack development skills (React, Laravel, MySQL) with video production capabilities (DaVinci Resolve) and technical support expertise (Telus Digital, IT troubleshooting).",
+    "I combine professional full-stack development skills (React, Laravel, MySQL) with video production capabilities (DaVinci Resolve, Premier Pro) and technical support expertise (Telus Digital, IT troubleshooting).",
 };
 
 export const navItems = [

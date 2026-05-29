@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Headphones, MonitorCog, UsersRound, Zap } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import { profile } from "@/lib/data";
 
 const pillars = [
   { title: "Troubleshooting", icon: MonitorCog, text: "I like problems with a signal path: symptoms, context, diagnosis, fix, follow-up." },
@@ -23,7 +24,7 @@ export default function About() {
           className="lg:col-span-7 space-y-6 max-w-[65ch] text-left"
         >
           <p className="font-serif text-[1.18rem] italic leading-[1.65] text-red-100/95">
-            I am a software engineer and technical support specialist from Morocco, currently working in a technical assistant/support role at TELUS Communications.
+            I am a software engineer and technical support specialist from Morocco.
           </p>
           <p className="text-base leading-8 text-zinc-300">
             That mix matters. I do not just think about how an app looks on launch day. I think about how people use it, how it fails, how support teams explain it, and how the system can be made easier to trust over time.
@@ -34,7 +35,7 @@ export default function About() {
           
           <div className="pt-4 border-t border-white/5">
             <p className="text-xs font-mono uppercase tracking-wider text-zinc-500">
-              Technical assistant & support · TELUS Communications
+              {profile.title} · {profile.location}
             </p>
           </div>
         </motion.div>
