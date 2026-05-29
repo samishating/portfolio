@@ -14,41 +14,41 @@ const pillars = [
 
 export default function About() {
   return (
-    <SectionWrapper id="about" eyebrow="Dispatch · 01" title="About the Builder">
+    <SectionWrapper id="about" eyebrow="Profile | 01" title="A builder with support instincts and product discipline.">
       <div className="grid gap-10 lg:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-7 space-y-6 max-w-[65ch] text-left"
+          className="max-w-[65ch] space-y-6 text-left lg:col-span-7"
         >
-          <p className="font-serif text-[1.18rem] italic leading-[1.65] text-red-100/95">
+          <p className="text-[1.18rem] font-semibold leading-[1.65] text-sky-100">
             I am a software engineer and technical support specialist from Morocco.
           </p>
-          <p className="text-base leading-8 text-zinc-300">
+          <p className="text-base leading-8 text-slate-300">
             That mix matters. I do not just think about how an app looks on launch day. I think about how people use it, how it fails, how support teams explain it, and how the system can be made easier to trust over time.
           </p>
-          <p className="text-base leading-8 text-zinc-400 font-mono text-sm">
+          <p className="font-mono text-sm leading-7 text-slate-400">
             Outside support work, I build personal web apps and community platforms with a strong interest in gaming, esports, automation, and scalable digital communities.
           </p>
-          
-          <div className="pt-4 border-t border-white/5">
-            <p className="text-xs font-mono uppercase tracking-wider text-zinc-500">
-              {profile.title} · {profile.location}
+
+          <div className="border-t border-white/10 pt-4">
+            <p className="font-mono text-xs uppercase tracking-wider text-slate-500">
+              {profile.title} | {profile.location}
             </p>
           </div>
         </motion.div>
 
-        <motion.aside 
+        <motion.aside
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="lg:col-span-5 flex flex-col justify-center lg:pl-10 lg:border-l border-white/10"
+          className="flex flex-col justify-center rounded-lg border border-white/10 bg-white/[0.035] p-6 lg:col-span-5 lg:p-8"
         >
-          <p className="font-serif italic text-2xl leading-relaxed text-red-400 relative">
-            <span className="absolute -left-4 -top-3 text-4xl text-white/10 font-serif" aria-hidden="true">“</span>
+          <p className="relative text-2xl font-semibold leading-relaxed text-emerald-200">
+            <span className="absolute -left-3 -top-3 text-4xl text-white/10" aria-hidden="true">&quot;</span>
             Support work taught me how to communicate under pressure, design for failure, and build digital systems that people actually trust.
           </p>
         </motion.aside>
@@ -62,15 +62,15 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.55, delay: index * 0.07 }}
-            className="story-pill border border-white/20 bg-zinc-950/70 p-6"
+            className="story-pill rounded-lg border border-white/10 bg-slate-950/60 p-6"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="grid size-9 place-items-center bg-red-500/10 border border-red-500/20 text-red-400">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="grid size-9 place-items-center rounded-lg border border-sky-300/20 bg-sky-300/10 text-sky-300">
                 <pillar.icon className="size-4" />
               </div>
               <h3 className="text-base font-bold tracking-tight text-white">{pillar.title}</h3>
             </div>
-            <p className="text-xs leading-6 text-zinc-500 font-mono">{pillar.text}</p>
+            <p className="font-mono text-xs leading-6 text-slate-400">{pillar.text}</p>
           </motion.div>
         ))}
       </div>

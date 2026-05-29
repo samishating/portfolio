@@ -26,9 +26,9 @@ export const profile = {
   phoneLabel: "+212 691-822258",
   discord: "lethal_fentanyl",
   intro:
-    "Building robust full-stack applications, event-driven web modules, and reliable digital systems.",
+    "I build readable web products, practical support workflows, and community platforms that stay useful after launch.",
   subtitle:
-    "I combine professional full-stack development skills (React, Laravel, MySQL) with video production capabilities (DaVinci Resolve, Premier Pro) and technical support expertise (Telus Digital, IT troubleshooting).",
+    "React, Next.js, Laravel, MySQL, technical support, IT troubleshooting, and creative production with DaVinci Resolve and Photoshop.",
 };
 
 export const navItems = [
@@ -40,9 +40,9 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: "IT", label: "Consulting & tech operations" },
+  { value: "IT", label: "Consulting and tech operations" },
   { value: "Web", label: "Laravel, React, databases" },
-  { value: "BHL", label: "Esports & content design" },
+  { value: "BHL", label: "Esports and content design" },
 ];
 
 export const skillGroups = [
@@ -84,7 +84,7 @@ export const projects = [
     preview: "https://bhl-website.vercel.app",
     image: "/projects/bhl.png",
     tags: ["Next.js", "MongoDB", "Vercel", "Community Platform", "Gamification", "Esports"],
-    accent: "from-red-500/30 via-zinc-900 to-white/10",
+    accent: "from-sky-400/25 via-slate-950 to-emerald-300/10",
   },
   {
     title: "PC Telegram Bot",
@@ -93,7 +93,7 @@ export const projects = [
     github: "https://github.com/samishating/PC-TELEGRAM-BOT",
     image: "/projects/telegram-bot.png",
     tags: ["Automation", "Telegram Bot", "Python/Node", "Utility Tool"],
-    accent: "from-sky-400/20 via-zinc-900 to-red-500/10",
+    accent: "from-sky-400/20 via-slate-950 to-amber-300/10",
   },
   {
     title: "Project Manager",
@@ -102,7 +102,7 @@ export const projects = [
     github: "https://github.com/1tapsMachine/project_manager",
     image: "/projects/project-manager.png",
     tags: ["Web App", "Productivity", "Full-stack"],
-    accent: "from-white/15 via-zinc-900 to-red-600/20",
+    accent: "from-white/15 via-slate-950 to-emerald-300/15",
   },
 ];
 
@@ -189,6 +189,6 @@ export const contactLinks = [
 export const visualBadges = [
   { label: "Full-stack capability", icon: ShieldCheck },
   { label: "Networked systems", icon: Network },
-  { label: "Video editing & production", icon: Gamepad2 },
-  { label: "IT & hardware diagnostics", icon: Cloud },
+  { label: "Video editing and production", icon: Gamepad2 },
+  { label: "IT and hardware diagnostics", icon: Cloud },
 ];

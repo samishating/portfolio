@@ -14,25 +14,24 @@ export default function Navbar() {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.55, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50 bg-black/75 backdrop-blur-xl border-b border-white/5"
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl"
     >
-      {/* Editorial Masthead Topline */}
-      <div className="border-b border-white/10 bg-black/30">
-        <div className="container-custom flex h-9 items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
-          <div>Issue 2026 — Portfolio of Sam</div>
+      <div className="border-b border-white/10 bg-white/[0.025]">
+        <div className="container-custom flex h-9 items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-slate-400">
+          <div>2026 Portfolio of Sam</div>
           <div className="flex items-center gap-2">
             <span className="relative flex size-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex size-1.5 rounded-full bg-red-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-emerald-400" />
             </span>
-            <span>Available · Morocco</span>
+            <span>Available | Morocco</span>
           </div>
         </div>
       </div>
 
       <div className="container-custom flex h-16 items-center justify-between">
         <Link href="#home" className="group flex items-center gap-3">
-          <span className="grid size-9 place-items-center border border-red-500/40 bg-red-500/10 text-sm font-black text-white shadow-[0_0_28px_rgba(239,68,68,0.25)]">
+          <span className="grid size-9 place-items-center rounded-lg border border-sky-300/40 bg-sky-300/10 text-sm font-black text-white shadow-[0_0_28px_rgba(56,189,248,0.18)]">
             S
           </span>
           <span className="text-sm font-semibold uppercase tracking-[0.24em] text-white/90">
@@ -66,7 +65,7 @@ export default function Navbar() {
         <motion.nav
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="border-t border-white/10 bg-zinc-950/95 px-4 py-4 md:hidden"
+          className="border-t border-white/10 bg-slate-950/95 px-4 py-4 md:hidden"
         >
           <div className="mx-auto flex max-w-7xl flex-col gap-2">
             {navItems.map((item) => (
@@ -78,7 +77,6 @@ export default function Navbar() {
         </motion.nav>
       )}
 
-      {/* Cyber Hazard Tape Separator */}
       <div className="hazard-tape w-full" />
     </motion.header>
   );

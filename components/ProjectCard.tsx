@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import type { projects } from "@/lib/data";
@@ -19,23 +20,25 @@ export default function ProjectCard({ project, index }: { project: Project; inde
     >
       <div className={`relative min-h-48 overflow-hidden bg-gradient-to-br ${project.accent}`}>
         {project.image && (
-          <img
+          <Image
             src={project.image}
             alt={project.title}
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         )}
         <div className="absolute inset-0 tech-grid opacity-35" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-        <div className="absolute left-5 top-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-200 drop-shadow-md">
-          <span className="size-1.5 bg-red-500" />
+        <div className="absolute left-5 top-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-100 drop-shadow-md">
+          <span className="size-1.5 rounded-full bg-sky-300" />
           Project 0{index + 1}
         </div>
         {!project.image && (
           <div className="absolute bottom-5 left-5 right-5">
             <div className="h-20 border border-white/10 bg-black/30 p-4 backdrop-blur-md">
               <div className="mb-3 h-2 w-2/3 bg-white/25" />
-              <div className="h-2 w-1/2 bg-red-400/45" />
+              <div className="h-2 w-1/2 bg-sky-300/45" />
             </div>
           </div>
         )}
@@ -43,7 +46,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
 
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-2xl font-black text-white">{project.title}</h3>
-        <p className="mt-4 flex-1 text-sm leading-7 text-zinc-400">{project.description}</p>
+        <p className="mt-4 flex-1 text-sm leading-7 text-slate-300">{project.description}</p>
 
         <div className="mt-6 flex flex-wrap gap-2">
           {project.tags.map((tag) => (

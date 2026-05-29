@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #ef4444;
-  --color-panel: #101010;
+  --color-accent: #38bdf8;
+  --color-panel: #111827;
   --color-ink: #f8fafc;
-  --color-muted: #a1a1aa;
+  --color-muted: #cbd5e1;
   
   --font-sans: var(--font-sans), sans-serif;
   --font-serif: var(--font-serif), serif;
   --font-mono: var(--font-mono), monospace;
   
   --color-gold: #f59e0b;
-  --color-slate-elevated: #111113;
-  --color-paper: #f4f4f5;
+  --color-slate-elevated: #111827;
+  --color-paper: #f8fafc;
 }
 
 * {
@@ -20,22 +20,24 @@
 }
 
 html {
-  background: #000;
+  background: #060914;
 }
 
 body {
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(239, 68, 68, 0.07), transparent 18rem),
-    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.07), transparent 34rem),
-    #000;
+    linear-gradient(180deg, rgba(56, 189, 248, 0.1), transparent 24rem),
+    radial-gradient(ellipse at 80% 5%, rgba(16, 185, 129, 0.12), transparent 28rem),
+    radial-gradient(ellipse at 0% 20%, rgba(245, 158, 11, 0.08), transparent 30rem),
+    #060914;
+  color: #f8fafc;
 }
 
 a,
 button,
 input,
 textarea {
-  outline-color: rgba(239, 68, 68, 0.75);
+  outline-color: rgba(56, 189, 248, 0.75);
 }
 
 .container-custom {
@@ -43,27 +45,27 @@ textarea {
 }
 
 .glass-panel {
-  @apply border border-white/10 bg-white/[0.055] backdrop-blur-xl shadow-[0_18px_70px_rgba(0,0,0,0.35)];
+  @apply rounded-lg border border-white/10 bg-slate-950/55 backdrop-blur-xl shadow-[0_18px_70px_rgba(0,0,0,0.28)];
 }
 
 .primary-button {
-  @apply inline-flex items-center justify-center gap-2 bg-red-500 text-sm font-bold text-white transition duration-300 hover:bg-red-400 hover:shadow-[0_0_34px_rgba(239,68,68,0.38)] active:scale-[0.98];
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-sky-400 px-5 py-3 text-sm font-bold text-slate-950 transition duration-300 hover:bg-sky-300 hover:shadow-[0_0_34px_rgba(56,189,248,0.28)] active:scale-[0.98];
 }
 
 .secondary-button {
-  @apply inline-flex items-center justify-center gap-2 border border-white/10 bg-white/[0.04] text-sm font-bold text-zinc-200 transition duration-300 hover:border-red-400/50 hover:bg-red-500/10 hover:text-white;
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.055] px-5 py-3 text-sm font-bold text-slate-200 transition duration-300 hover:border-sky-300/50 hover:bg-sky-400/10 hover:text-white;
 }
 
 .icon-button {
-  @apply inline-grid size-10 place-items-center border border-white/10 bg-white/[0.04] text-zinc-300 transition duration-300 hover:border-red-400/50 hover:bg-red-500/10 hover:text-white;
+  @apply inline-grid size-10 place-items-center rounded-lg border border-white/10 bg-white/[0.055] text-slate-300 transition duration-300 hover:border-sky-300/50 hover:bg-sky-400/10 hover:text-white;
 }
 
 .nav-link {
-  @apply px-3 py-2 text-sm font-medium text-zinc-400 transition duration-300 hover:text-white;
+  @apply rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition duration-300 hover:bg-white/[0.055] hover:text-white;
 }
 
 .section-eyebrow {
-  @apply mb-3 text-xs font-black uppercase tracking-[0.26em] text-red-300;
+  @apply mb-3 text-xs font-black uppercase tracking-[0.2em] text-sky-300;
 }
 
 .section-title {
@@ -71,46 +73,37 @@ textarea {
 }
 
 .skill-chip {
-  @apply border border-white/10 bg-black/30 px-3 py-1.5 text-sm font-medium text-zinc-300;
+  @apply rounded-full border border-white/10 bg-white/[0.055] px-3 py-1.5 text-sm font-medium text-slate-300;
 }
 
 .field-label {
-  @apply grid gap-2 text-sm font-bold text-zinc-300;
+  @apply grid gap-2 text-sm font-bold text-slate-300;
 }
 
 .field-input {
-  @apply w-full border border-white/10 bg-black/35 px-4 py-3 text-sm text-white placeholder:text-zinc-600 transition focus:border-red-400/60 focus:bg-black/55;
+  @apply w-full rounded-lg border border-white/10 bg-slate-950/55 px-4 py-3 text-sm text-white placeholder:text-slate-500 transition focus:border-sky-300/60 focus:bg-slate-950/75;
 }
 
 .tech-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-  background-size: 46px 46px;
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 54px 54px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), transparent 88%);
 }
 
-/* Editorial & Cyber-Retro Layout Accents */
+/* Portfolio layout accents */
 
 .display-wordmark {
-  font-family: var(--font-serif), serif;
-  font-style: italic;
+  font-family: var(--font-sans), sans-serif;
+  font-style: normal;
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
 }
 
 .hazard-tape {
-  height: 14px;
-  background: repeating-linear-gradient(
-    -45deg,
-    #ef4444,
-    #ef4444 8px,
-    #050506 8px,
-    #050506 16px
-  );
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 16px rgba(239, 68, 68, 0.15);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.45), rgba(16, 185, 129, 0.35), transparent);
 }
 
 .kicker {
@@ -127,7 +120,7 @@ textarea {
   bottom: 0;
   left: 50%;
   width: 1px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(239, 68, 68, 0.3) 50%, rgba(255, 255, 255, 0.02));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.18), rgba(56, 189, 248, 0.34) 50%, rgba(255, 255, 255, 0.02));
   transform: translateX(-50%);
   display: none;
 }
@@ -151,8 +144,8 @@ textarea {
 }
 
 .story-pill:hover {
-  border-color: rgba(239, 68, 68, 0.45);
-  box-shadow: 0 12px 34px rgba(239, 68, 68, 0.06);
+  border-color: rgba(56, 189, 248, 0.42);
+  box-shadow: 0 12px 34px rgba(56, 189, 248, 0.08);
 }
 
 @media (prefers-reduced-motion: reduce) {

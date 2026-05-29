@@ -6,7 +6,7 @@ import { skillGroups } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <SectionWrapper id="skills" eyebrow="Skills" title="A practical stack for building and supporting real systems." className="bg-zinc-950/70">
+    <SectionWrapper id="skills" eyebrow="Skills" title="A practical stack for building and supporting real systems." className="bg-slate-950/45">
       <div className="grid gap-4 md:grid-cols-2">
         {skillGroups.map((group, index) => (
           <motion.article
@@ -19,7 +19,7 @@ export default function Skills() {
             className="glass-panel p-6 sm:p-7"
           >
             <div className="mb-6 flex items-center gap-4">
-              <div className="grid size-12 place-items-center border border-red-500/25 bg-red-500/10 text-red-300">
+                <div className="grid size-12 place-items-center rounded-lg border border-sky-300/25 bg-sky-300/10 text-sky-300">
                 <group.icon className="size-5" />
               </div>
               <h3 className="text-xl font-black text-white">{group.title}</h3>

@@ -8,7 +8,7 @@ import { contactLinks, profile } from "@/lib/data";
 
 export default function Contact() {
   return (
-    <SectionWrapper id="contact" eyebrow="Contact" title="Let's connect around support, web apps, or community platforms." className="bg-zinc-950/70">
+    <SectionWrapper id="contact" eyebrow="Contact" title="Let's connect around support, web apps, or community platforms." className="bg-slate-950/45">
       <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <motion.div
           initial={{ opacity: 0, y: 22 }}
@@ -17,7 +17,7 @@ export default function Contact() {
           transition={{ duration: 0.55 }}
           className="glass-panel p-6 sm:p-8"
         >
-          <p className="text-lg leading-8 text-zinc-300">
+          <p className="text-lg leading-8 text-slate-300">
             I am open to software engineering work, technical support opportunities, collaborations, and serious community platform ideas.
           </p>
           <div className="mt-8 space-y-3">

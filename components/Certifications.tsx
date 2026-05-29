@@ -17,9 +17,9 @@ export default function Certifications() {
             transition={{ duration: 0.55, delay: index * 0.07 }}
             className="glass-panel p-6"
           >
-            <item.icon className="mb-6 size-7 text-red-400" />
+            <item.icon className="mb-6 size-7 text-sky-300" />
             <h3 className="text-lg font-black text-white">{item.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-zinc-500">{item.description}</p>
+            <p className="mt-3 text-sm leading-6 text-slate-400">{item.description}</p>
           </motion.article>
         ))}
       </div>

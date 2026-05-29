@@ -12,14 +12,14 @@ const ThreeNetworkScene = dynamic(() => import("@/components/ThreeNetworkScene")
 
 export default function VisualSection() {
   return (
-    <SectionWrapper className="overflow-hidden bg-black" eyebrow="3D System View" title="I build systems that feel alive.">
+    <SectionWrapper className="overflow-hidden" eyebrow="3D System View" title="I build systems that feel alive.">
       <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7 }}
-          className="relative h-[420px] min-h-[420px] overflow-hidden border-y border-white/10 bg-zinc-950 sm:h-[520px]"
+              className="relative h-[420px] min-h-[420px] overflow-hidden rounded-lg border border-white/10 bg-slate-950 sm:h-[520px]"
         >
           <div className="absolute inset-0 tech-grid opacity-30" />
           <ThreeNetworkScene />
@@ -35,7 +35,7 @@ export default function VisualSection() {
               transition={{ duration: 0.55, delay: index * 0.08 }}
               className="glass-panel flex items-center gap-4 p-5"
             >
-              <div className="grid size-11 place-items-center border border-red-500/30 bg-red-500/10 text-red-300">
+              <div className="grid size-11 place-items-center rounded-lg border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
                 <badge.icon className="size-5" />
               </div>
               <p className="font-semibold text-zinc-200">{badge.label}</p>
