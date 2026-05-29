@@ -16,19 +16,19 @@ import {
 } from "lucide-react";
 
 export const profile = {
-  name: "Sam",
-  title: "Software Engineer & Technical Support Specialist",
-  location: "Morocco",
+  name: "Sami Aziz",
+  title: "Full-Stack Web Developer & IT Specialist",
+  location: "Casablanca, Morocco",
   email: "mailto:aziz.sami_business@outlook.com",
   emailLabel: "aziz.sami_business@outlook.com",
   github: "https://github.com/samishating",
   phone: "tel:+212691822258",
-  phoneLabel: "+212 691 822 258",
+  phoneLabel: "+212 691-822258",
   discord: "lethal_fentanyl",
   intro:
-    "Building reliable digital systems, smooth web experiences, and community-driven platforms.",
+    "Building robust full-stack applications, event-driven web modules, and reliable digital systems.",
   subtitle:
-    "I combine technical support discipline with software engineering craft to solve real problems, ship clean web apps, and design scalable communities with a serious gaming edge.",
+    "I combine professional full-stack development skills (React, Laravel, MySQL) with video production capabilities (DaVinci Resolve) and technical support expertise (Telus Digital, IT troubleshooting).",
 };
 
 export const navItems = [
@@ -40,41 +40,38 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: "IT", label: "Support & telecom operations" },
-  { value: "Web", label: "Apps, platforms, dashboards" },
-  { value: "BHL", label: "Community platform initiative" },
+  { value: "IT", label: "Consulting & tech operations" },
+  { value: "Web", label: "Laravel, React, databases" },
+  { value: "BHL", label: "Esports & content design" },
 ];
 
 export const skillGroups = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: ["Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML/CSS", "Responsive UI"],
+    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "HTML/CSS", "Responsive Design", "WordPress"],
   },
   {
-    title: "Backend / Database",
+    title: "Backend / SGBD",
     icon: Database,
-    skills: ["Node.js", "API routes", "MongoDB", "Authentication", "Server-side rendering", "Basic cloud deployment"],
+    skills: ["PHP (Laravel)", "Node.js", "Python", "C / C++", "SGBD (MySQL, MongoDB)"],
   },
   {
-    title: "IT / Support",
+    title: "IT Support & Ops",
     icon: Headphones,
     skills: [
-      "Windows / macOS troubleshooting",
-      "Office 365",
-      "Active Directory basics",
-      "Exchange / Outlook support",
-      "Networking fundamentals",
-      "TCP/IP",
+      "Telecom incident resolution",
       "Remote troubleshooting",
-      "Incident handling",
-      "Customer support",
+      "Workstation hardware maintenance",
+      "Systems optimization",
+      "Customer satisfaction",
+      "Meta Ads acquisition",
     ],
   },
   {
-    title: "Tools",
+    title: "Creative Tools",
     icon: Wrench,
-    skills: ["GitHub", "Vercel", "Azure", "VS Code", "Resend", "Cloudflare", "Adobe tools basics"],
+    skills: ["DaVinci Resolve (Editing)", "Adobe Photoshop (Design)", "GitHub", "Vercel", "VS Code"],
   },
 ];
 
@@ -111,42 +108,73 @@ export const projects = [
 
 export const experience = [
   {
-    role: "Technical Assistant / Support",
-    company: "TELUS Communications",
-    period: "Current",
+    role: "Consultant informatique",
+    company: "KaramCasa",
+    period: "Dec 2025 - Feb 2026",
+    shortLabel: "CONS",
     points: [
-      "Handle technical troubleshooting across telecom support workflows.",
-      "Guide customers through remote diagnostics, issue resolution, and clear next steps.",
-      "Support incident handling with calm communication, de-escalation, and reliable documentation.",
+      "Led the digital transformation of the store, ensuring technical coordination and development of WordPress/JS custom modules.",
+      "Directed the digital marketing and user acquisition strategy (Meta Ads) around the karamcasa.ma platform.",
     ],
   },
   {
-    role: "Gaming PC Shop Technician",
-    company: "Previous / Additional Experience",
-    period: "Hardware & service",
+    role: "Editeur et gestionnaire de contenu",
+    company: "Social Networks / @brotherhood_legacy_",
+    period: "2024 - 2025",
+    shortLabel: "MEDIA",
     points: [
-      "Built, optimized, and troubleshot custom gaming PCs for customers.",
-      "Diagnosed hardware and software issues across Windows systems and gaming setups.",
-      "Balanced technical fixes with direct customer support and practical recommendations.",
+      "Contributed to high-quality gaming and esports content production across digital channels.",
+      "Used DaVinci Resolve and Adobe Photoshop for professional editing and visual styling of team projects.",
+      "Collaborated on video and digital content series for the Brotherhood Legacy community.",
+    ],
+  },
+  {
+    role: "Technicien support technique",
+    company: "Telus Digital",
+    period: "Sept 2024 - Sept 2025",
+    shortLabel: "TELUS",
+    points: [
+      "Diagnosed and resolved telecom service incidents for international Telus customers.",
+      "Provided remote assistance, securing rapid solutions to maintain optimal customer satisfaction.",
+    ],
+  },
+  {
+    role: "Technicien informatique (Intern)",
+    company: "Workstation (Station de travail)",
+    period: "March 2024",
+    shortLabel: "TECH",
+    points: [
+      "Strengthened hardware skills through server/workstation maintenance, diagnostics, and component upgrades.",
+      "Handled optimization and troubleshooting of client workstation operating systems.",
+    ],
+  },
+  {
+    role: "Opérateur CNC",
+    company: "Manufacturing Sector",
+    period: "2020 - 2021",
+    shortLabel: "CNC",
+    points: [
+      "Operated computer numerical control (CNC) machinery for high-precision components.",
+      "Managed CNC programming, general equipment maintenance, and strict manufacturing quality control.",
     ],
   },
 ];
 
 export const certifications = [
   {
-    title: "ALX Morocco Software Engineering",
-    description: "Software engineering certification focused on practical development fundamentals.",
+    title: "Specialized Full-Stack Degree",
+    description: "Graduated in Specialized Digital Development Full Stack from ISTA Hay Hassani 1 (2022-2024). Focused on web systems, schema design, and algorithms.",
+    icon: Cpu,
+  },
+  {
+    title: "ALX Software Engineering Certification",
+    description: "Certified by ALX in 2024, focusing on production-grade systems, advanced frontend/backend architectures, and team collaboration.",
     icon: Braces,
   },
   {
     title: "Cisco PCAP / Advanced Python Programming",
-    description: "Python programming foundation with deeper problem solving and automation practice.",
+    description: "Certified by Cisco in 2023, validating skills in advanced object-oriented programming, data structures, and script automation.",
     icon: Terminal,
-  },
-  {
-    title: "Computer Science & Web Development",
-    description: "Ongoing technical background across web applications, systems thinking, and product building.",
-    icon: Cpu,
   },
 ];
 
@@ -159,8 +187,8 @@ export const contactLinks = [
 ];
 
 export const visualBadges = [
-  { label: "Support-grade reliability", icon: ShieldCheck },
-  { label: "Networked communities", icon: Network },
-  { label: "Cloud-ready delivery", icon: Cloud },
-  { label: "Gaming-native systems", icon: Gamepad2 },
+  { label: "Full-stack capability", icon: ShieldCheck },
+  { label: "Networked systems", icon: Network },
+  { label: "Video editing & production", icon: Gamepad2 },
+  { label: "IT & hardware diagnostics", icon: Cloud },
 ];

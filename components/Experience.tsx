@@ -12,7 +12,7 @@ export default function Experience() {
         
         <div className="space-y-8 md:space-y-6">
           {experience.map((item, index) => {
-            const sideLabel = index === 0 ? "NOW" : "TECH";
+            const sideLabel = item.shortLabel || "TECH";
             const isEven = index % 2 === 0;
 
             return (
