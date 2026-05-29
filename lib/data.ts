@@ -85,6 +85,7 @@ export const projects = [
       "A multi-division community platform for gaming, esports, music, sport, content, and community engagement. Includes XP, ranks, divisions, user profiles, admin dashboard concepts, recruitment, creator features, and real-time community stats.",
     github: "https://github.com/samishating/bhl_website",
     preview: "https://bhl-website.vercel.app",
+    image: "/projects/bhl.png",
     tags: ["Next.js", "MongoDB", "Vercel", "Community Platform", "Gamification", "Esports"],
     accent: "from-red-500/30 via-zinc-900 to-white/10",
   },
@@ -93,6 +94,7 @@ export const projects = [
     description:
       "A personal automation project using Telegram to interact with or control PC-related actions remotely.",
     github: "https://github.com/samishating/PC-TELEGRAM-BOT",
+    image: "/projects/telegram-bot.png",
     tags: ["Automation", "Telegram Bot", "Python/Node", "Utility Tool"],
     accent: "from-sky-400/20 via-zinc-900 to-red-500/10",
   },
@@ -101,6 +103,7 @@ export const projects = [
     description:
       "A project management-style app focused on organizing tasks, users, and workflow logic.",
     github: "https://github.com/1tapsMachine/project_manager",
+    image: "/projects/project-manager.png",
     tags: ["Web App", "Productivity", "Full-stack"],
     accent: "from-white/15 via-zinc-900 to-red-600/20",
   },

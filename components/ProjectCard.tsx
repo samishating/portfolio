@@ -18,17 +18,27 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       className="group glass-panel flex h-full flex-col overflow-hidden"
     >
       <div className={`relative min-h-48 overflow-hidden bg-gradient-to-br ${project.accent}`}>
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
         <div className="absolute inset-0 tech-grid opacity-35" />
-        <div className="absolute left-5 top-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">
-          <span className="size-1.5 bg-red-400" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
+        <div className="absolute left-5 top-5 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-200 drop-shadow-md">
+          <span className="size-1.5 bg-red-500" />
           Project 0{index + 1}
         </div>
-        <div className="absolute bottom-5 left-5 right-5">
-          <div className="h-20 border border-white/10 bg-black/30 p-4 backdrop-blur-md">
-            <div className="mb-3 h-2 w-2/3 bg-white/25" />
-            <div className="h-2 w-1/2 bg-red-400/45" />
+        {!project.image && (
+          <div className="absolute bottom-5 left-5 right-5">
+            <div className="h-20 border border-white/10 bg-black/30 p-4 backdrop-blur-md">
+              <div className="mb-3 h-2 w-2/3 bg-white/25" />
+              <div className="h-2 w-1/2 bg-red-400/45" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-6">
