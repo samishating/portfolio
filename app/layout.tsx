@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  style: ["italic", "normal"],
+  weight: ["400", "700", "900"],
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sam.dev"),
@@ -38,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+      <body
+        className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable} ${inter.className} bg-black text-white antialiased`}
+      >
         {children}
       </body>
     </html>

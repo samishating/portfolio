@@ -14,8 +14,22 @@ export default function Navbar() {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.55, ease: "easeOut" }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 bg-black/75 backdrop-blur-xl border-b border-white/5"
     >
+      {/* Editorial Masthead Topline */}
+      <div className="border-b border-white/10 bg-black/30">
+        <div className="container-custom flex h-9 items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">
+          <div>Issue 2026 — Portfolio of Sam</div>
+          <div className="flex items-center gap-2">
+            <span className="relative flex size-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex size-1.5 rounded-full bg-red-500"></span>
+            </span>
+            <span>Available · Morocco</span>
+          </div>
+        </div>
+      </div>
+
       <div className="container-custom flex h-16 items-center justify-between">
         <Link href="#home" className="group flex items-center gap-3">
           <span className="grid size-9 place-items-center border border-red-500/40 bg-red-500/10 text-sm font-black text-white shadow-[0_0_28px_rgba(239,68,68,0.25)]">
@@ -63,6 +77,9 @@ export default function Navbar() {
           </div>
         </motion.nav>
       )}
+
+      {/* Cyber Hazard Tape Separator */}
+      <div className="hazard-tape w-full" />
     </motion.header>
   );
 }

@@ -6,40 +6,69 @@ import { experience } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <SectionWrapper id="experience" eyebrow="Experience" title="Technical support experience that makes the engineering stronger." className="bg-zinc-950/70">
-      <div className="relative">
-        <div className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-red-500 via-white/15 to-transparent md:block" />
-        <div className="space-y-5">
-          {experience.map((item, index) => (
-            <motion.article
-              key={`${item.role}-${item.company}`}
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.55, delay: index * 0.08 }}
-              className="relative md:pl-12"
-            >
-              <span className="absolute left-[13px] top-8 hidden size-2.5 bg-red-400 shadow-[0_0_22px_rgba(239,68,68,0.7)] md:block" />
-              <div className="glass-panel p-6 sm:p-8">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <h3 className="text-2xl font-black text-white">{item.role}</h3>
-                    <p className="mt-1 text-zinc-400">{item.company}</p>
-                  </div>
-                  <span className="w-fit border border-red-500/25 bg-red-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-red-200">
-                    {item.period}
+    <SectionWrapper id="experience" eyebrow="Timeline · 02" title="The Road So Far" className="bg-zinc-950/70 relative">
+      <div className="relative mt-8">
+        <span className="timeline-axis" aria-hidden="true" />
+        
+        <div className="space-y-8 md:space-y-6">
+          {experience.map((item, index) => {
+            const sideLabel = index === 0 ? "NOW" : "TECH";
+            const isEven = index % 2 === 0;
+
+            return (
+              <motion.article
+                key={`${item.role}-${item.company}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
+                className="relative grid grid-cols-1 md:grid-cols-2"
+              >
+                <div className={`relative ${isEven ? "md:pr-12 md:text-right" : "md:col-start-2 md:pl-12"}`}>
+                  
+                  {/* Floating Year / Marker */}
+                  <span 
+                    className={`display-wordmark absolute top-1 hidden text-[clamp(44px,5vw,72px)] text-red-500/10 md:block select-none ${
+                      isEven ? "-right-8" : "-left-8"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    {sideLabel}
                   </span>
-                </div>
-                <div className="mt-6 grid gap-3 md:grid-cols-3">
-                  {item.points.map((point) => (
-                    <p key={point} className="border-l border-white/10 pl-4 text-sm leading-6 text-zinc-400">
-                      {point}
+
+                  <article className="story-pill border border-white/20 bg-black/45 p-6 sm:p-8">
+                    <p className="kicker text-zinc-500">{item.period}</p>
+                    
+                    <h3 className="mt-3 text-[1.28rem] italic leading-[1.35] text-white sm:text-[1.42rem] font-serif">
+                      {item.role}
+                    </h3>
+                    
+                    <p className={`mt-2 font-mono text-[0.66rem] uppercase tracking-[0.16em] text-red-400 ${
+                      isEven ? "md:text-right" : ""
+                    }`}>
+                      {item.company}
                     </p>
-                  ))}
+
+                    {/* Interactive Details Dispatch */}
+                    <details className="mt-5 timeline-details group text-left">
+                      <summary className="focus-outline inline-flex items-center cursor-pointer font-mono text-[0.68rem] uppercase tracking-[0.18em] text-red-400 select-none group-open:text-zinc-500">
+                        <span className="group-open:hidden">Read Dispatch →</span>
+                        <span className="hidden group-open:inline">Close Dispatch ↑</span>
+                      </summary>
+                      
+                      <ul className="mt-4 space-y-3 text-xs leading-6 text-zinc-400 font-mono border-t border-white/5 pt-4">
+                        {item.points.map((point) => (
+                          <li key={point} className="list-none relative pl-4 border-l border-red-500/25">
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  </article>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>

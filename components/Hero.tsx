@@ -27,36 +27,49 @@ export default function Hero() {
           transition={{ duration: 0.75, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <div className="mb-7 inline-flex items-center gap-2 border border-red-500/30 bg-red-500/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-red-100 shadow-[0_0_32px_rgba(239,68,68,0.12)]">
-            <span className="size-1.5 bg-red-400" />
-            Morocco-based builder
+          <div className="relative inline-block mb-6">
+            <span className="inline-flex bg-red-500 px-3.5 py-1.5 font-mono text-[0.62rem] font-black uppercase tracking-[0.16em] text-black">
+              Software Engineer / Systems Builder
+            </span>
           </div>
 
-          <p className="mb-4 text-lg font-medium text-white/70">{profile.name}</p>
-          <h1 className="max-w-5xl text-balance text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-6xl lg:text-7xl">
-            {profile.title}
+          <h1 className="display-wordmark text-[clamp(68px,12vw,140px)] leading-[0.8] text-white">
+            {profile.name}
           </h1>
-          <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-zinc-300 sm:text-xl">
+          
+          <p className="mt-6 max-w-4xl text-[1.12rem] italic leading-[1.6] text-red-100/90 font-serif">
+            {profile.title}
+          </p>
+          
+          <p className="mt-5 max-w-2xl text-pretty text-base leading-8 text-zinc-300">
             {profile.intro}
           </p>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-500">{profile.subtitle}</p>
+          
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-500 font-mono">
+            {profile.subtitle}
+          </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link href="#projects" className="primary-button px-6 py-3.5">
+            <Link href="#projects" className="primary-button px-6 py-3.5 rounded-none font-mono tracking-wider">
               <Play className="size-4 fill-current" />
-              View Projects
+              Read the Work
             </Link>
-            <Link href="#contact" className="secondary-button px-6 py-3.5">
+            <Link href="#contact" className="secondary-button px-6 py-3.5 rounded-none font-mono tracking-wider">
               <Mail className="size-4" />
-              Contact Me
+              Write to Me
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-3 sm:grid-cols-3">
+          {/* Technical Stats Strip */}
+          <div className="mt-14 border-t border-white/10 pt-8 grid gap-4 py-4 sm:grid-cols-3 sm:gap-6">
             {stats.map((item) => (
-              <div key={item.label} className="glass-panel p-4">
-                <div className="text-xl font-black text-white">{item.value}</div>
-                <div className="mt-1 text-sm leading-5 text-zinc-500">{item.label}</div>
+              <div key={item.label} className="border-l border-white/20 pl-4 first:border-l-0 first:pl-0">
+                <p className="display-wordmark text-[clamp(48px,6vw,78px)] leading-[0.8] text-red-500">
+                  {item.value}
+                </p>
+                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>

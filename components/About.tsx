@@ -13,44 +13,65 @@ const pillars = [
 
 export default function About() {
   return (
-    <SectionWrapper id="about" eyebrow="About" title="Support-trained. Engineering-focused. Community-minded.">
-      <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+    <SectionWrapper id="about" eyebrow="Dispatch · 01" title="About the Builder">
+      <div className="grid gap-10 lg:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 text-lg leading-8 text-zinc-300"
+          className="lg:col-span-7 space-y-6 max-w-[65ch] text-left"
         >
-          <p>
+          <p className="font-serif text-[1.18rem] italic leading-[1.65] text-red-100/95">
             I am a software engineer and technical support specialist from Morocco, currently working in a technical assistant/support role at TELUS Communications.
-            My background sits at the intersection of web development, IT support, telecom troubleshooting, and customer-facing problem solving.
           </p>
-          <p>
-            That mix matters. I do not just think about how an app looks on launch day. I think about how people use it, how it fails, how support teams explain it,
-            and how the system can be made easier to trust over time.
+          <p className="text-base leading-8 text-zinc-300">
+            That mix matters. I do not just think about how an app looks on launch day. I think about how people use it, how it fails, how support teams explain it, and how the system can be made easier to trust over time.
           </p>
-          <p>
+          <p className="text-base leading-8 text-zinc-400 font-mono text-sm">
             Outside support work, I build personal web apps and community platforms with a strong interest in gaming, esports, automation, and scalable digital communities.
           </p>
+          
+          <div className="pt-4 border-t border-white/5">
+            <p className="text-xs font-mono uppercase tracking-wider text-zinc-500">
+              Technical assistant & support · TELUS Communications
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {pillars.map((pillar, index) => (
-            <motion.div
-              key={pillar.title}
-              initial={{ opacity: 0, y: 22 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.55, delay: index * 0.07 }}
-              className="glass-panel p-6"
-            >
-              <pillar.icon className="mb-5 size-6 text-red-400" />
-              <h3 className="text-lg font-bold text-white">{pillar.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-500">{pillar.text}</p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.aside 
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="lg:col-span-5 flex flex-col justify-center lg:pl-10 lg:border-l border-white/10"
+        >
+          <p className="font-serif italic text-2xl leading-relaxed text-red-400 relative">
+            <span className="absolute -left-4 -top-3 text-4xl text-white/10 font-serif" aria-hidden="true">“</span>
+            Support work taught me how to communicate under pressure, design for failure, and build digital systems that people actually trust.
+          </p>
+        </motion.aside>
+      </div>
+
+      <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {pillars.map((pillar, index) => (
+          <motion.div
+            key={pillar.title}
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.55, delay: index * 0.07 }}
+            className="story-pill border border-white/20 bg-zinc-950/70 p-6"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="grid size-9 place-items-center bg-red-500/10 border border-red-500/20 text-red-400">
+                <pillar.icon className="size-4" />
+              </div>
+              <h3 className="text-base font-bold tracking-tight text-white">{pillar.title}</h3>
+            </div>
+            <p className="text-xs leading-6 text-zinc-500 font-mono">{pillar.text}</p>
+          </motion.div>
+        ))}
       </div>
     </SectionWrapper>
   );

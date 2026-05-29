@@ -5,6 +5,14 @@
   --color-panel: #101010;
   --color-ink: #f8fafc;
   --color-muted: #a1a1aa;
+  
+  --font-sans: var(--font-sans), sans-serif;
+  --font-serif: var(--font-serif), serif;
+  --font-mono: var(--font-mono), monospace;
+  
+  --color-gold: #f59e0b;
+  --color-slate-elevated: #111113;
+  --color-paper: #f4f4f5;
 }
 
 * {
@@ -80,6 +88,71 @@ textarea {
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
   background-size: 46px 46px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), transparent 88%);
+}
+
+/* Editorial & Cyber-Retro Layout Accents */
+
+.display-wordmark {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.hazard-tape {
+  height: 14px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ef4444,
+    #ef4444 8px,
+    #050506 8px,
+    #050506 16px
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.15);
+}
+
+.kicker {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.timeline-axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(239, 68, 68, 0.3) 50%, rgba(255, 255, 255, 0.02));
+  transform: translateX(-50%);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .timeline-axis {
+    display: block;
+  }
+}
+
+.timeline-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-details summary {
+  list-style: none;
+}
+
+.story-pill {
+  transition: all 0.38s ease;
+}
+
+.story-pill:hover {
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 12px 34px rgba(239, 68, 68, 0.06);
 }
 
 @media (prefers-reduced-motion: reduce) {
