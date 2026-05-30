@@ -1,20 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Headphones, MonitorCog, UsersRound, Zap } from "lucide-react";
+import { Code2, Database, Globe, Layers } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import { profile } from "@/lib/data";
 
 const pillars = [
-  { title: "Troubleshooting", icon: MonitorCog, text: "I like problems with a signal path: symptoms, context, diagnosis, fix, follow-up." },
-  { title: "Customer Calm", icon: UsersRound, text: "Support work taught me how to communicate under pressure and make technical steps feel clear." },
-  { title: "Web Platforms", icon: Zap, text: "I build interfaces and systems for projects that need structure, speed, and room to grow." },
-  { title: "Ops Mindset", icon: Headphones, text: "Telecom and IT support sharpened my respect for reliability, documentation, and user impact." },
+  {
+    title: "Développement Web",
+    icon: Code2,
+    text: "Conception et développement d'applications web modernes, de la maquette au déploiement en production.",
+  },
+  {
+    title: "Architecture Full-Stack",
+    icon: Layers,
+    text: "Maîtrise du frontend (React, Next.js) et du backend (Node.js, Laravel, PHP) pour des solutions complètes.",
+  },
+  {
+    title: "Bases de données",
+    icon: Database,
+    text: "Conception et gestion de bases de données relationnelles (MySQL) et NoSQL (MongoDB) pour des applications performantes.",
+  },
+  {
+    title: "Applications Web",
+    icon: Globe,
+    text: "Développement de plateformes web complexes avec gestion utilisateurs, APIs REST, et systèmes en temps réel.",
+  },
 ];
 
 export default function About() {
   return (
-    <SectionWrapper id="about" eyebrow="Profile | 01" title="A builder with support instincts and product discipline.">
+    <SectionWrapper id="about" eyebrow="Profil | 01" title="Développeur Full-Stack orienté résultats et performance.">
       <div className="grid gap-10 lg:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -24,18 +40,18 @@ export default function About() {
           className="max-w-[65ch] space-y-6 text-left lg:col-span-7"
         >
           <p className="text-[1.18rem] font-semibold leading-[1.65] text-sky-100">
-            I am a software engineer and technical support specialist from Morocco.
+            Développeur Web Full-Stack basé à Casablanca, Maroc.
           </p>
           <p className="text-base leading-8 text-slate-300">
-            That mix matters. I do not just think about how an app looks on launch day. I think about how people use it, how it fails, how support teams explain it, and how the system can be made easier to trust over time.
+            Spécialisé en développement d&apos;applications web modernes avec React.js, Next.js, Laravel et MongoDB. Je conçois des systèmes complets — du frontend réactif jusqu&apos;au backend et aux bases de données — avec une attention particulière à la maintenabilité, la performance et l&apos;expérience utilisateur.
           </p>
           <p className="font-mono text-sm leading-7 text-slate-400">
-            Outside support work, I build personal web apps and community platforms with a strong interest in gaming, esports, automation, and scalable digital communities.
+            Mon expérience en support technique chez TELUS Digital m&apos;a donné un sens aigu des problèmes en production, de la fiabilité des systèmes et de la communication technique claire. Je construis du code que d&apos;autres développeurs peuvent lire, maintenir et faire évoluer.
           </p>
 
           <div className="border-t border-white/10 pt-4">
             <p className="font-mono text-xs uppercase tracking-wider text-slate-500">
-              {profile.title} | {profile.location}
+              {profile.title} · {profile.location}
             </p>
           </div>
         </motion.div>
@@ -49,8 +65,15 @@ export default function About() {
         >
           <p className="relative text-2xl font-semibold leading-relaxed text-emerald-200">
             <span className="absolute -left-3 -top-3 text-4xl text-white/10" aria-hidden="true">&quot;</span>
-            Support work taught me how to communicate under pressure, design for failure, and build digital systems that people actually trust.
+            Je construis des applications web complètes, de l&apos;interface utilisateur jusqu&apos;à la base de données, avec rigueur et souci du détail.
           </p>
+          <div className="mt-6 flex flex-wrap gap-2 border-t border-white/10 pt-5">
+            {["Développement Web", "Full-Stack", "Frontend", "Backend", "Applications Web", "Bases de données"].map((kw) => (
+              <span key={kw} className="rounded border border-emerald-300/20 bg-emerald-300/8 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-emerald-300">
+                {kw}
+              </span>
+            ))}
+          </div>
         </motion.aside>
       </div>
 

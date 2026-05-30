@@ -1,194 +1,183 @@
 import {
   Braces,
-  Cloud,
   Code2,
   Cpu,
   Database,
-  Gamepad2,
   Github,
   Globe2,
   Headphones,
+  Layout,
+  Linkedin,
   Mail,
-  Network,
-  ShieldCheck,
+  Server,
+  Settings2,
   Terminal,
   Wrench,
 } from "lucide-react";
 
 export const profile = {
   name: "Sami Aziz",
-  title: "Full-Stack Web Developer & IT Specialist",
-  location: "Casablanca, Morocco",
+  title: "Développeur Web Full-Stack",
+  location: "Casablanca, Maroc",
   email: "mailto:aziz.sami_business@outlook.com",
   emailLabel: "aziz.sami_business@outlook.com",
   github: "https://github.com/samishating",
+  linkedin: "https://linkedin.com/in/sami-aziz",
   phone: "tel:+212691822258",
   phoneLabel: "+212 691-822258",
   discord: "lethal_fentanyl",
   intro:
-    "I build readable web products, practical support workflows, and community platforms that stay useful after launch.",
+    "Développeur spécialisé en applications web modernes, frontend/backend, bases de données et solutions techniques.",
   subtitle:
-    "React, Next.js, Laravel, MySQL, technical support, IT troubleshooting, and creative production with DaVinci Resolve and Photoshop.",
+    "React.js • Next.js • JavaScript • MongoDB • MySQL • Laravel • PHP",
+  cvUrl: "/uploads/cv-sami-aziz.pdf",
 };
 
 export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
+  { label: "Profil", href: "#about" },
+  { label: "Compétences", href: "#skills" },
+  { label: "Projets", href: "#projects" },
+  { label: "Expérience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const stats = [
-  { value: "IT", label: "Consulting and tech operations" },
-  { value: "Web", label: "Laravel, React, databases" },
-  { value: "BHL", label: "Esports and content design" },
+  { value: "3+", label: "Ans d'expérience web" },
+  { value: "Full", label: "Stack Frontend & Backend" },
+  { value: "BHL", label: "Plateforme communautaire" },
 ];
 
 export const skillGroups = [
   {
     title: "Frontend",
-    icon: Code2,
-    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "HTML/CSS", "Responsive Design", "WordPress"],
+    icon: Layout,
+    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Design"],
   },
   {
-    title: "Backend / SGBD",
+    title: "Backend",
+    icon: Server,
+    skills: ["Node.js", "PHP", "Laravel", "Python", "REST APIs", "SSR / ISR"],
+  },
+  {
+    title: "Bases de données",
     icon: Database,
-    skills: ["PHP (Laravel)", "Node.js", "Python", "C / C++", "SGBD (MySQL, MongoDB)"],
+    skills: ["MongoDB", "MySQL", "Modélisation BDD", "Requêtes SQL"],
   },
   {
-    title: "IT Support & Ops",
-    icon: Headphones,
-    skills: [
-      "Telecom incident resolution",
-      "Remote troubleshooting",
-      "Workstation hardware maintenance",
-      "Systems optimization",
-      "Customer satisfaction",
-      "Meta Ads acquisition",
-    ],
-  },
-  {
-    title: "Creative Tools",
+    title: "Outils & DevOps",
     icon: Wrench,
-    skills: ["DaVinci Resolve (Editing)", "Adobe Photoshop (Design)", "GitHub", "Vercel", "VS Code"],
+    skills: ["Git / GitHub", "Vercel", "WordPress", "DaVinci Resolve", "Adobe Photoshop", "VS Code"],
   },
 ];
 
 export const projects = [
   {
-    title: "Brotherhood Legacy / BHL",
+    title: "Brotherhood Legacy Platform",
+    subtitle: "BHL — Plateforme communautaire complète",
     description:
-      "A multi-division community platform for gaming, esports, music, sport, content, and community engagement. Includes XP, ranks, divisions, user profiles, admin dashboard concepts, recruitment, creator features, and real-time community stats.",
+      "Plateforme communautaire moderne avec dashboard administrateur, gestion utilisateurs, système XP / niveaux, leaderboards, contenu dynamique, et architecture performante SSR/ISR. Interface complète pour une communauté gaming/esports avec profils, recrutement et statistiques en temps réel.",
     github: "https://github.com/samishating/bhl_website",
     preview: "https://bhl-website.vercel.app",
     image: "/projects/bhl.png",
-    tags: ["Next.js", "MongoDB", "Vercel", "Community Platform", "Gamification", "Esports"],
+    tags: ["Next.js", "MongoDB", "JavaScript", "API REST", "SSR/ISR", "Vercel", "Gamification"],
     accent: "from-sky-400/25 via-slate-950 to-emerald-300/10",
+    featured: true,
   },
   {
     title: "PC Telegram Bot",
+    subtitle: "Automatisation système",
     description:
-      "A personal automation project using Telegram to interact with or control PC-related actions remotely.",
+      "Bot Telegram permettant l'automatisation d'actions système, le contrôle distant et l'interaction machine-to-machine via API Telegram. Gestion d'événements, commandes distantes et notifications automatisées.",
     github: "https://github.com/samishating/PC-TELEGRAM-BOT",
     image: "/projects/telegram-bot.png",
-    tags: ["Automation", "Telegram Bot", "Python/Node", "Utility Tool"],
+    tags: ["Python", "Automation", "Telegram API", "Contrôle distant"],
     accent: "from-sky-400/20 via-slate-950 to-amber-300/10",
+    featured: false,
   },
   {
     title: "Project Manager",
+    subtitle: "Gestion de projets web",
     description:
-      "A project management-style app focused on organizing tasks, users, and workflow logic.",
+      "Application de gestion de projets avec organisation des tâches, suivi du workflow, attribution utilisateurs et outils de productivité intégrés.",
     github: "https://github.com/1tapsMachine/project_manager",
     image: "/projects/project-manager.png",
-    tags: ["Web App", "Productivity", "Full-stack"],
+    tags: ["Full-Stack", "Web App", "Gestion de projet", "Productivité"],
     accent: "from-white/15 via-slate-950 to-emerald-300/15",
+    featured: false,
   },
 ];
 
 export const experience = [
   {
-    role: "Consultant informatique",
-    company: "KaramCasa",
-    period: "Dec 2025 - Feb 2026",
-    shortLabel: "CONS",
-    points: [
-      "Led the digital transformation of the store, ensuring technical coordination and development of WordPress/JS custom modules.",
-      "Directed the digital marketing and user acquisition strategy (Meta Ads) around the karamcasa.ma platform.",
-    ],
-  },
-  {
-    role: "Editeur et gestionnaire de contenu",
-    company: "Social Networks / @brotherhood_legacy_",
-    period: "2024 - 2025",
-    shortLabel: "MEDIA",
-    points: [
-      "Contributed to high-quality gaming and esports content production across digital channels.",
-      "Used DaVinci Resolve and Adobe Photoshop for professional editing and visual styling of team projects.",
-      "Collaborated on video and digital content series for the Brotherhood Legacy community.",
-    ],
-  },
-  {
-    role: "Technicien support technique",
-    company: "Telus Digital",
-    period: "Sept 2024 - Sept 2025",
+    role: "Technicien Support Technique",
+    company: "TELUS Digital",
+    period: "Sept 2024 – Sept 2025",
     shortLabel: "TELUS",
     points: [
-      "Diagnosed and resolved telecom service incidents for international Telus customers.",
-      "Provided remote assistance, securing rapid solutions to maintain optimal customer satisfaction.",
+      "Diagnostic et résolution d'incidents télécom pour clients internationaux.",
+      "Support client à distance avec gestion rapide des tickets et incidents.",
+      "Troubleshooting technique avancé sur systèmes et réseaux télécommunications.",
+      "Maintien d'un taux élevé de satisfaction client et respect des SLA.",
     ],
   },
   {
-    role: "Technicien informatique (Intern)",
-    company: "Workstation (Station de travail)",
-    period: "March 2024",
+    role: "Consultant Informatique",
+    company: "KaramCasa",
+    period: "Déc 2025 – Fév 2026",
+    shortLabel: "KARAM",
+    points: [
+      "Digitalisation complète du magasin et développement de modules WordPress / JavaScript personnalisés.",
+      "Coordination technique des projets numériques et intégration des outils de gestion.",
+      "Stratégie digitale et acquisition client via Meta Ads sur la plateforme karamcasa.ma.",
+      "Mise en place d'une architecture technique adaptée aux besoins e-commerce.",
+    ],
+  },
+  {
+    role: "Technicien Informatique",
+    company: "Station de Travail",
+    period: "Mars 2024",
     shortLabel: "TECH",
     points: [
-      "Strengthened hardware skills through server/workstation maintenance, diagnostics, and component upgrades.",
-      "Handled optimization and troubleshooting of client workstation operating systems.",
-    ],
-  },
-  {
-    role: "Opérateur CNC",
-    company: "Manufacturing Sector",
-    period: "2020 - 2021",
-    shortLabel: "CNC",
-    points: [
-      "Operated computer numerical control (CNC) machinery for high-precision components.",
-      "Managed CNC programming, general equipment maintenance, and strict manufacturing quality control.",
+      "Maintenance informatique matérielle et logicielle sur postes de travail et serveurs.",
+      "Dépannage hardware/software, diagnostics et remplacement de composants.",
+      "Optimisation des systèmes d'exploitation et amélioration des performances.",
+      "Support technique aux utilisateurs et rédaction de rapports d'intervention.",
     ],
   },
 ];
 
 export const certifications = [
   {
-    title: "Specialized Full-Stack Degree",
-    description: "Graduated in Specialized Digital Development Full Stack from ISTA Hay Hassani 1 (2022-2024). Focused on web systems, schema design, and algorithms.",
+    title: "Technicien Spécialisé Développement Digital Full Stack",
+    description:
+      "Diplômé de l'ISTA Hay Hassani 1 (2022–2024). Formation complète en développement web full-stack : architecture systèmes, bases de données, algorithmes, et applications modernes.",
     icon: Cpu,
   },
   {
-    title: "ALX Software Engineering Certification",
-    description: "Certified by ALX in 2024, focusing on production-grade systems, advanced frontend/backend architectures, and team collaboration.",
+    title: "ALX Software Engineering",
+    description:
+      "Certifié ALX (2024) sur les systèmes de production, architectures frontend/backend avancées, collaboration d'équipe et pratiques de développement agile.",
     icon: Braces,
   },
   {
-    title: "Cisco PCAP / Advanced Python Programming",
-    description: "Certified by Cisco in 2023, validating skills in advanced object-oriented programming, data structures, and script automation.",
+    title: "Cisco PCAP — Python Avancé",
+    description:
+      "Certifié Cisco (2023) en programmation orientée objet avancée, structures de données, automatisation de scripts et développement Python.",
     icon: Terminal,
   },
 ];
 
 export const contactLinks = [
   { label: profile.emailLabel, href: profile.email, icon: Mail },
-  { label: "GitHub", href: profile.github, icon: Github },
+  { label: "GitHub — samishating", href: profile.github, icon: Github },
+  { label: "LinkedIn", href: profile.linkedin, icon: Linkedin },
   { label: profile.phoneLabel, href: profile.phone, icon: Headphones },
-  { label: profile.discord, href: "#contact", icon: Gamepad2 },
   { label: "BHL Preview", href: "https://bhl-website.vercel.app", icon: Globe2 },
 ];
 
 export const visualBadges = [
-  { label: "Full-stack capability", icon: ShieldCheck },
-  { label: "Networked systems", icon: Network },
-  { label: "Video editing and production", icon: Gamepad2 },
-  { label: "IT and hardware diagnostics", icon: Cloud },
+  { label: "Applications Web Full-Stack", icon: Code2 },
+  { label: "Architecture Frontend / Backend", icon: Server },
+  { label: "Bases de données & APIs REST", icon: Database },
+  { label: "Maintenance & Support Applicatif", icon: Settings2 },
 ];

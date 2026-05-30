@@ -9,6 +9,29 @@ import Skills from "@/components/Skills";
 import VisualSection from "@/components/VisualSection";
 import { profile } from "@/lib/data";
 
+export const metadata = {
+  title: "Sami Aziz — Développeur Web Full-Stack | React, Next.js, Laravel, MongoDB",
+  description:
+    "Portfolio de Sami Aziz, Développeur Web Full-Stack basé à Casablanca. Spécialisé en React.js, Next.js, JavaScript, MongoDB, MySQL, Laravel et PHP. Disponible pour des postes en développement web et applications.",
+  keywords: [
+    "Développeur Web",
+    "Full-Stack",
+    "Frontend",
+    "Backend",
+    "Applications Web",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "MongoDB",
+    "Laravel",
+    "PHP",
+    "MySQL",
+    "Node.js",
+    "Casablanca",
+    "Maroc",
+  ],
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-transparent pt-24 text-white selection:bg-sky-300 selection:text-slate-950">
@@ -22,11 +45,12 @@ export default function Home() {
       <VisualSection />
       <Contact />
 
+      {/* Colophon */}
       <section id="colophon" className="container-custom py-14">
         <div className="rounded-lg border border-white/10 bg-slate-950/65 p-6 text-left sm:p-10">
-          <p className="kicker mb-4 text-sky-300">Colophon | Info</p>
+          <p className="kicker mb-4 text-sky-300">À propos de ce portfolio</p>
           <p className="max-w-4xl text-[1.05rem] leading-[1.7] text-slate-300">
-            This portfolio was built in Next.js, powered by React Three Fiber and Framer Motion, and deployed on Vercel. It is structured for readability, smooth interaction, and direct contact with future collaborators or hiring teams.
+            Portfolio développé en Next.js avec React Three Fiber, Framer Motion et TypeScript. Déployé sur Vercel. Conçu pour être lisible, rapide et pensé pour les recruteurs techniques et les équipes d&apos;ingénierie.
           </p>
 
           <a
@@ -37,19 +61,25 @@ export default function Home() {
           </a>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
-            <a href={profile.github} target="_blank" rel="noreferrer" className="transition hover:text-white">GitHub</a>
+            <a href={profile.github} target="_blank" rel="noreferrer" className="transition hover:text-white">
+              GitHub
+            </a>
             <span aria-hidden="true" className="text-slate-700">|</span>
-            <a href="#contact" className="transition hover:text-white">Discord: {profile.discord}</a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="transition hover:text-white">
+              LinkedIn
+            </a>
             <span aria-hidden="true" className="text-slate-700">|</span>
-            <a href={profile.phone} className="transition hover:text-white">Phone: {profile.phoneLabel}</a>
+            <a href={profile.phone} className="transition hover:text-white">
+              {profile.phoneLabel}
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/10 bg-slate-950/70 py-8">
         <div className="container-custom flex flex-col justify-between gap-4 text-center font-mono text-[10px] uppercase tracking-[0.14em] text-slate-500 sm:flex-row sm:items-center sm:text-left">
-          <p>2026 Portfolio | Made in Morocco | (c) Sam</p>
-          <p className="text-[9px]">Next.js | TypeScript | Three.js | Tailwind v4</p>
+          <p>2026 · Sami Aziz · Développeur Web Full-Stack · Casablanca, Maroc</p>
+          <p className="text-[9px]">Next.js · TypeScript · Three.js · Framer Motion · Vercel</p>
         </div>
       </footer>
     </main>
