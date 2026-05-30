@@ -150,7 +150,7 @@ export const certifications = [
   {
     title: "Technicien Spécialisé Développement Digital Full Stack",
     description:
-      "Diplômé de l'ISTA Hay Hassani 1 (2022–2024). Formation complète en développement web full-stack : architecture systèmes, bases de données, algorithmes, et applications modernes.",
+      "Diplômé en développement digital full-stack (2024). Compétences acquises en conception d'applications web, architecture systèmes, modélisation de bases de données, algorithmes et intégration de solutions modernes.",
     icon: Cpu,
   },
   {
